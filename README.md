@@ -1,30 +1,32 @@
 # Bootstrap 5 Task Manager
 
-A responsive static task manager dashboard built with HTML, Bootstrap 5, and a small amount of vanilla JavaScript. The project demonstrates common Bootstrap components in a simple task management interface.
+A responsive task manager dashboard built with HTML, Bootstrap 5, and vanilla JavaScript. The project demonstrates common Bootstrap components in a simple task management interface with working browser-side task functionality.
 
 ## Overview
 
-This project is a front-end UI prototype for managing tasks. It includes a navigation bar, breadcrumb trail, task list, modal form, dropdown actions, tabbed content, pagination, tooltip, and popover examples.
-
-The current version does not save, edit, delete, or filter real task data. It is designed as a Bootstrap layout and component practice project.
+This project lets users create, edit, complete, delete, search, and filter tasks. Task data is stored in the browser with localStorage, so saved tasks remain after refreshing the page.
 
 ## Features
 
 - Responsive dark navbar with collapsible mobile menu
 - Breadcrumb navigation for page context
-- Task list card with status badges
-- Add Task modal with title, description, and status fields
-- Actions dropdown for edit, delete, and completion options
+- Task summary cards for all, pending, and completed tasks
+- Dynamic task list with status badges
+- Add and edit task modal
+- Delete task action
+- Mark task as completed action
 - Tabs for all, completed, and pending tasks
-- Pagination UI
-- Bootstrap tooltip example
-- Bootstrap popover example
+- Search by task title or description
+- Pagination for longer task lists
+- localStorage persistence
+- Bootstrap tooltip and popover examples
 
 ## Tech Stack
 
 - HTML5
 - Bootstrap 5.0.2 via CDN
 - Vanilla JavaScript
+- Browser localStorage
 
 ## Project Structure
 
@@ -45,27 +47,25 @@ No installation or build step is required.
 ## How It Works
 
 - Bootstrap CSS is loaded from the CDN in the document head.
-- The page layout is built using Bootstrap containers, cards, buttons, badges, tabs, modals, dropdowns, breadcrumbs, and pagination classes.
-- Bootstrap Bundle JS is loaded at the end of the page to enable interactive components.
-- Small JavaScript snippets initialize the tooltip and popover components.
+- Bootstrap Bundle JS is loaded at the end of the page to enable modals, tooltips, popovers, and navbar behavior.
+- JavaScript manages task creation, editing, deletion, completion, filtering, searching, pagination, and localStorage updates.
+- Tasks are rendered dynamically from the saved task array.
 
 ## Current Limitations
 
-- Tasks are hard-coded in the HTML.
-- The modal form does not add new tasks yet.
-- Dropdown actions are placeholders.
-- Tabs and pagination display static content only.
-- Task data is not stored in local storage or a database.
+- Task data is saved only in the current browser through localStorage.
+- There is no backend, login system, or shared database.
+- There are no due dates, priorities, or categories yet.
 
 ## Future Improvements
 
-- Add JavaScript to create tasks from the modal form.
-- Add edit, delete, and mark-complete functionality.
-- Store tasks in local storage.
-- Filter tasks by status.
-- Update the page title from `Document` to a project-specific title.
-- Improve accessibility with clearer labels and ARIA attributes.
+- Add due dates and priority levels.
+- Add task categories or labels.
+- Add drag-and-drop task ordering.
+- Add a dark mode toggle.
+- Connect the app to a backend API or database.
+- Add automated tests for task behavior.
 
 ## Author
 
-Created as a Bootstrap 5 task manager UI practice project.
+Created as a Bootstrap 5 task manager project.
